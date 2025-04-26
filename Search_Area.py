@@ -2,6 +2,7 @@ import math
 import json
 from shapely.geometry import Polygon
 from pyproj import Transformer
+from offline_folium import offline
 import folium
 
 
