@@ -45,7 +45,7 @@ webbrowser.open(f"file://{os.path.abspath(html_file)}")
 
 while True:
     print("\nChoose an action:")
-    print("1 = Upload waypoints.json as-is")
+    print("1 = Upload waypoints.json as")
     print("2 = Reverse waypoint order and upload")
     print("3 = Quit")
 
