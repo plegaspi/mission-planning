@@ -5,8 +5,8 @@ import webbrowser
 import os
 import datetime
 import yaml
-
-# --- Mission Parameters ---
+######################
+# Mission Parameters --- #
 photo_width = 7728
 photo_height = 5152
 horizontal_fov = 30.49
@@ -23,10 +23,20 @@ bounds = [
     [21.4002307, -157.7646790]
 ]
 
+remote_ip = "192.168.1.50"
+remote_user = "uhdt"
+
 waypoint_file = "waypoints.json"
 html_file = "mission_waypoints.html"
 mission_planner_file = "mission.waypoints"
 
+waypoint_remote_path = f"/home/uhdt/ws2_livox/waypoints.json"
+map_remote_path = f"/home/uhdt/ws2_livox/mission_waypoints.html"
+mission_planner_remote_path = f"/home/uhdt/ws2_livox/mission.waypoints"
+remote_yaml_files = [
+    "/home/uhdt/UHDT-ODCL-2025/config/flight-testing.yaml",
+    "/home/uhdt/UHDT-ODCL-2025/config/config.yaml"
+]
 
 generate_mission_from_params(bounds, photo_width, photo_height,
                              horizontal_fov, vertical_fov,
@@ -69,16 +79,6 @@ while True:
     else:
         print("Invalid input. Try again.")
 
-
-remote_ip = "192.168.1.50"
-remote_user = "uhdt"
-waypoint_remote_path = f"/home/uhdt/ws2_livox/waypoints.json"
-map_remote_path = f"/home/uhdt/ws2_livox/mission_waypoints.html"
-mission_planner_remote_path = f"/home/uhdt/ws2_livox/mission.waypoints"
-remote_yaml_files = [
-    "/home/uhdt/UHDT-ODCL-2025/config/flight-testing.yaml",
-    "/home/uhdt/UHDT-ODCL-2025/config/config.yaml"
-]
 
 try:
     while True:
